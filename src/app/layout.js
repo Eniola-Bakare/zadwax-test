@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import AddOns from "./components/AddOns";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,10 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex h-dvh`}>
-        <AddOns />
-        {children}
-      </body>
+      <body className={`${inter.className} flex h-dvh`}>{children}</body>
     </html>
   );
 }
