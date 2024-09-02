@@ -4,7 +4,7 @@ import MainContent from "./components/MainContent";
 
 export default function Home() {
   return (
-    <main className=" flex max-w-[1512px] w-[1512px] h-dvh items-start flex-shrink-0">
+    <main className=" flex w-full max-w-[1440px] h-dvh items-start flex-shrink-0">
       <Menu />
       <MainContent />
     </main>
