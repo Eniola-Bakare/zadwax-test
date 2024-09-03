@@ -70,10 +70,10 @@ export default function MainContent({ setShowMenu }) {
     },
   ];
   return (
-    <div className="bg-white h-dvh overflow-y-scroll w-full text-black">
+    <div className="bg-white h-dvh w-full text-black">
       <SearchBar setShowMenu={setShowMenu} />
 
-      <section className="w-full max-w-[1440px] px-3 lg:pl-8 pt-6 lg:pr-10 ">
+      <section className="w-full h-dvh overflow-y-scroll max-w-[1440px] px-3 lg:pl-8 pt-6 lg:pr-10 ">
         <div className="flex flex-col gap-2 pb-6">
           <p className={`text-textHeader ${brFirmaFont.className} text-3xl `}>
             Welcome Susan,
@@ -84,7 +84,7 @@ export default function MainContent({ setShowMenu }) {
         </div>
 
         <div className=" relative flex justify-between items-center bg-bgPrimary/60 rounded-2xl py-6">
-          <div className="w-[85%] lg:w-[90%] flex flex-col pl-4 lg:pl-6 gap-2">
+          <div className="w-[80%] lg:w-[75%] flex flex-col pl-4 lg:pl-6 gap-2">
             <p className="text-sm font-semibold text-gray900 ">
               Welcome to the cool kids club
             </p>
@@ -106,10 +106,10 @@ export default function MainContent({ setShowMenu }) {
           </div>
         </div>
 
-        <div className="steps flex flex-col lg:flex-wrap justify-between gap-8 pt-7 pb-3 ">
+        <div className="steps flex flex-col xl:flex-row justify-between gap-8 pt-7 pb-3 ">
           <div className="__first flex flex-col items-start gap-3 flex-1 border p-4 rounded-lg">
-            <div className="w-full flex flex-col-reverse lg:flex-wrap justify-between items-center">
-              <div className=" flex flex-col">
+            <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center">
+              <div className="w-full lg:w-7/12 flex items-start flex-col">
                 <p className="text-2xl font-black text-textHeader">
                   Getting Started{" "}
                 </p>{" "}
@@ -162,10 +162,10 @@ export default function MainContent({ setShowMenu }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pb-40 lg:pb-0">
+        <div className="flex flex-col gap-4 pb-40 md:pb-20 lg:pb-40">
           <p className="font-bold text-xl ">Resources for you</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4   ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4   ">
             {cards.map((eachCard) => {
               return (
                 <div key={eachCard.title} className="flex-1">

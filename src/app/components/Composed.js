@@ -71,19 +71,22 @@ export default function Dashboard() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="flex w-full h-dvh">
+    <div className="flex justify-center 2xl:justify-start w-full h-dvh overflow-hidden">
       <div className="hidden lg:flex h-full">
         <AddOns />
         <Menu />
         <MainContent />
       </div>
-      {showMenu && (
-        <div className="flex h-full">
-          <AddOns />
-          <Menu setShowMenu={setShowMenu} />
-        </div>
-      )}
-      {!showMenu && <MainContent setShowMenu={setShowMenu} />}
+
+      <div className="flex lg:hidden">
+        {showMenu && (
+          <div className="flex ">
+            <AddOns />
+            <Menu setShowMenu={setShowMenu} />
+          </div>
+        )}
+        {!showMenu && <MainContent setShowMenu={setShowMenu} />}
+      </div>
     </div>
   );
 }

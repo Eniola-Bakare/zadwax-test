@@ -7,7 +7,7 @@ export default function Menu({ setShowMenu }) {
       <div className="__menu-top ">
         <div className="__logo relative flex items-center gap-2 p-2 pt-10 lg:pt-0 pb-3">
           <IoIosCloseCircle
-            className="text-primary700 hover:text-primary700/30 text-4xl absolute top-0 right-0"
+            className="flex lg:hidden text-primary700 hover:text-primary700/30 text-4xl absolute top-0 right-0"
             onClick={() => setShowMenu(false)}
           />
 
