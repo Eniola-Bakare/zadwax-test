@@ -1,10 +1,16 @@
 import Image from "next/image";
+import { IoIosCloseCircle } from "react-icons/io";
 
-export default function Menu() {
+export default function Menu({ setShowMenu }) {
   return (
-    <section className="flex-shrink-0 w-[237px] bg-white flex flex-col justify-between h-full pt-4 px-3 pb-[30px] border-r-2 border-r-gray-50  ">
+    <section className="flex flex-shrink-0 w-[300px] lg:w-[237px] bg-white flex-col justify-between h-full pt-4 px-3 pb-[30px] lg:border-r-2  ">
       <div className="__menu-top ">
-        <div className="__logo flex items-center gap-2 p-2 pt-0 pb-3">
+        <div className="__logo relative flex items-center gap-2 p-2 pt-10 lg:pt-0 pb-3">
+          <IoIosCloseCircle
+            className="text-primary700 hover:text-primary700/30 text-4xl absolute top-0 right-0"
+            onClick={() => setShowMenu(false)}
+          />
+
           <Image
             src="/logo.png"
             width={18}
@@ -53,8 +59,7 @@ export default function Menu() {
             </div>
           </div>
 
-          <hr />
-          <div className="__menu-second border-t">
+          <div className="__menu-second relative border-t-2 ">
             <div className="flex items-center gap-5 p-2">
               <Image
                 src="/project.png"

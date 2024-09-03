@@ -1,7 +1,9 @@
-import Image from "next/image";
+"use client";
+
 import AddOns from "./AddOns";
 import Menu from "./Menu";
 import MainContent from "./MainContent";
+import { useState } from "react";
 
 export default function Dashboard() {
   const steps = [
@@ -66,11 +68,22 @@ export default function Dashboard() {
     },
   ];
 
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <div className="flex w-full h-dvh">
-      <AddOns />
-      <Menu />
-      <MainContent />
+      <div className="hidden lg:flex h-full">
+        <AddOns />
+        <Menu />
+        <MainContent />
+      </div>
+      {showMenu && (
+        <div className="flex h-full">
+          <AddOns />
+          <Menu setShowMenu={setShowMenu} />
+        </div>
+      )}
+      {!showMenu && <MainContent setShowMenu={setShowMenu} />}
     </div>
   );
 }

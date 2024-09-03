@@ -7,7 +7,7 @@ const brFirmaFont = localFont({
   src: "../../../public/fonts/BR-Firma-Bold.otf",
 });
 
-export default function MainContent() {
+export default function MainContent({ setShowMenu }) {
   const steps = [
     {
       id: " Step 1",
@@ -71,30 +71,30 @@ export default function MainContent() {
   ];
   return (
     <div className="bg-white h-dvh overflow-y-scroll w-full text-black">
-      <SearchBar />
+      <SearchBar setShowMenu={setShowMenu} />
 
-      <section className="w-full max-w-[1440px] pl-8 pt-6 pr-10 ">
+      <section className="w-full max-w-[1440px] px-3 lg:pl-8 pt-6 lg:pr-10 ">
         <div className="flex flex-col gap-2 pb-6">
           <p className={`text-textHeader ${brFirmaFont.className} text-3xl `}>
             Welcome Susan,
           </p>
-          <p className="text- font-medium text-gray700">
+          <p className="font-medium text-gray700">
             Get ready to complete your research processes on Zadwax
           </p>
         </div>
 
         <div className=" relative flex justify-between items-center bg-bgPrimary/60 rounded-2xl py-6">
-          <div className="w-[90%] flex flex-col pl-6 gap-2">
+          <div className="w-[85%] lg:w-[90%] flex flex-col pl-4 lg:pl-6 gap-2">
             <p className="text-sm font-semibold text-gray900 ">
               Welcome to the cool kids club
             </p>
-            <p className="text-primary700 text-2xl 2xl:text-3xl font-semibold">
+            <p className="text-primary700 lg:text-2xl 2xl:text-3xl font-semibold">
               The new way designers revolutionize their work. See how others are
               using Zadwax to accelerate their design process.
             </p>
           </div>
 
-          <div className="bg absolute right-0 bottom-0 w-40 ">
+          <div className="bg absolute right-0 bottom-0 lg:w-40 ">
             <Image
               src="/vector.png"
               // src="../../../public/vector.png"
@@ -106,18 +106,18 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div className="steps flex justify-between gap-8 pt-7 pb-3 ">
+        <div className="steps flex flex-col lg:flex-wrap justify-between gap-8 pt-7 pb-3 ">
           <div className="__first flex flex-col items-start gap-3 flex-1 border p-4 rounded-lg">
-            <div className="w-full flex justify-between items-center">
+            <div className="w-full flex flex-col-reverse lg:flex-wrap justify-between items-center">
               <div className=" flex flex-col">
                 <p className="text-2xl font-black text-textHeader">
-                  Getting Started <br />
+                  Getting Started{" "}
                 </p>{" "}
-                <p className="text-gray700">
+                <p className=" text-gray700">
                   Three simple steps to launch your first project
                 </p>
               </div>
-              <button className="px-3 py-2 rounded-lg bg-primaryColor text-white font-semibold">
+              <button className="px-3 py-2 rounded-lg bg-primaryColor text-white text-xs lg:text-base lg:font-semibold self-end">
                 Create project
               </button>
             </div>
@@ -162,7 +162,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 pb-40 lg:pb-0">
           <p className="font-bold text-xl ">Resources for you</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4   ">
