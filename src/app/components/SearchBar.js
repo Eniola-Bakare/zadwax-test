@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdNotifications } from "react-icons/io";
 
 export default function SearchBar({ setShowMenu }) {
   return (
@@ -10,7 +11,6 @@ export default function SearchBar({ setShowMenu }) {
           className="flex lg:hidden text-primary700 hover:text-primary700/45 ease-in-out cursor-pointer font-bold text-3xl "
           onClick={() => {
             setShowMenu(true);
-            console.log("first");
           }}
         />
       </div>
@@ -26,12 +26,7 @@ export default function SearchBar({ setShowMenu }) {
       </div>
       <div className="flex gap-6">
         <div className="flex justify-center items-center cursor-pointer hover:animate-pulse ease-in-out">
-          <Image
-            src={"/Notification.png"}
-            width={25}
-            alt="notification btn"
-            height={20}
-          />
+          <IoMdNotifications className="text-[28px] text-gray700 transition-all duration-300 ease-in-out hover:text-primary700 font-medium " />
         </div>
         <div className="w-[40px]">
           <Image

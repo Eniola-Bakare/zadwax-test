@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { IoIosCloseCircle } from "react-icons/io";
+import { GoHomeFill } from "react-icons/go";
+import { LuClock3 } from "react-icons/lu";
+import { TiStarOutline } from "react-icons/ti";
+import { TbFolder } from "react-icons/tb";
+import { RxInfoCircled } from "react-icons/rx";
+import { RiSettings4Line } from "react-icons/ri";
 
 export default function Menu({ setShowMenu }) {
   return (
@@ -25,81 +31,40 @@ export default function Menu({ setShowMenu }) {
 
         <div className="__menu ">
           <div className="__menu-first">
-            <div className="flex items-center gap-5 rounded-lg p-2 cursor-pointer bg-primary50">
-              <Image
-                src="/homeIcon.png"
-                width={25}
-                height={30}
-                alt="logo text & image"
-              />
-              <p className="flex-shrink-0 text-primary700 text-[21px] font-bold">
-                Home
-              </p>
-            </div>
-            <div className="flex items-center cursor-pointer p-2 gap-5">
-              <Image
-                src="/recently.png"
-                width={25}
-                height={30}
-                alt="logo text & image"
-              />
-              <p className="flex-shrink-0 text-gray700 text-[21px] font-medium">
-                Recents
-              </p>
-            </div>
-            <div className="flex items-center cursor-pointer gap-5 p-2">
-              <Image
-                src="/starred.png"
-                width={25}
-                height={30}
-                alt="logo text & image"
-              />
-              <p className="flex-shrink-0 text-gray700  text-[21px] font-medium">
-                Starred
-              </p>
-            </div>
+            <p className="group p-2 flex-shrink-0 flex gap-5 transition-all duration-300 ease-in-out hover:bg-primary50 rounded-lg text-gray700 hover:text-primary700 w-full font-medium  hover:font-semibold text-[21px] ">
+              <GoHomeFill className="text-[28px] text-gray700 group-hover:text-primary700 font-medium " />
+              Home
+            </p>
+
+            <p className="group p-2 flex-shrink-0 flex gap-5 transition-all duration-300 ease-in-out hover:bg-primary50 rounded-lg text-gray700 hover:text-primary700 w-full font-medium  hover:font-semibold text-[21px] ">
+              <LuClock3 className="text-[28px] text-gray700 group-hover:text-primary700 font-medium " />{" "}
+              Recents
+            </p>
+            <p className="group p-2 flex-shrink-0 flex gap-5 transition-all duration-300 ease-in-out hover:bg-primary50 rounded-lg text-gray700 hover:text-primary700 w-full font-medium  hover:font-semibold text-[21px] ">
+              <TiStarOutline className="text-[28px] text-gray700 group-hover:text-primary700 font-medium " />
+              Starred
+            </p>
           </div>
 
           <div className="__menu-second relative border-t-2 ">
-            <div className="flex items-center cursor-pointer gap-5 p-2">
-              <Image
-                src="/project.png"
-                width={25}
-                height={30}
-                alt="logo text & image"
-              />
-              <p className="flex-shrink-0 text-gray700 text-[21px] font-medium">
-                Projects
-              </p>
-            </div>
+            <p className="group p-2 flex-shrink-0 flex gap-5 transition-all duration-300 ease-in-out hover:bg-primary50 rounded-lg text-gray700 hover:text-primary700 w-full font-medium  hover:font-semibold text-[21px] ">
+              <TbFolder className="text-[28px] text-gray700 group-hover:text-primary700 font-medium " />{" "}
+              Projects
+            </p>
           </div>
         </div>
       </div>
 
       <div className="__menu-btn p-2">
-        <div className="flex items-center cursor-pointer gap-5">
-          <Image
-            src="/info.png"
-            width={25}
-            height={30}
-            alt="logo text & image"
-          />
-          <p className="flex-shrink-0 text-gray700 text-[21px] font-medium">
-            Support
-          </p>
-        </div>
+        <p className="group p-2 flex-shrink-0 flex gap-5 transition-all duration-300 ease-in-out hover:bg-primary50 rounded-lg text-gray700 hover:text-primary700 w-full font-medium  hover:font-semibold text-[21px] ">
+          <RxInfoCircled className="text-[28px] text-gray700 group-hover:text-primary700 font-medium " />
+          Support
+        </p>
 
-        <div className="flex items-center cursor-pointer gap-5">
-          <Image
-            src="/settings.png"
-            width={25}
-            height={30}
-            alt="logo text & image"
-          />
-          <p className="flex-shrink-0 text-gray700 text-[21px] font-medium">
-            Settings
-          </p>
-        </div>
+        <p className="group p-2 flex-shrink-0 flex gap-5 transition-all duration-300 ease-in-out hover:bg-primary50 rounded-lg text-gray700 hover:text-primary700 w-full font-medium  hover:font-semibold text-[21px] ">
+          <RiSettings4Line className="text-[28px] text-gray700 group-hover:text-primary700 font-medium " />
+          Settings
+        </p>
       </div>
     </section>
   );

@@ -168,42 +168,7 @@ export default function MainContent({ setShowMenu }) {
               return (
                 <div
                   key={eachCard.title}
-                  className="flex-1 hover:scale-105 ease-in-out"
-                >
-                  {
-                    <div className="w-full rounded-t-lg">
-                      <Image
-                        src={eachCard.imgURL}
-                        width={1000}
-                        height={100}
-                        className="w-full"
-                        alt="resource image"
-                      />
-
-                      <div className="flex flex-col gap-1 border p-3 rounded-b-md ">
-                        {
-                          <>
-                            <p className="text-lg font-semibold text-gray700">
-                              {eachCard.title}
-                            </p>
-                            <p className="text-gray500 text-sm">
-                              {eachCard.description}
-                            </p>
-                          </>
-                        }
-                      </div>
-                    </div>
-                  }
-                </div>
-              );
-            })}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4   ">
-            {cards.map((eachCard) => {
-              return (
-                <div
-                  key={eachCard.title}
-                  className="flex-1 hover:scale-105 ease-in-out"
+                  className="flex-1  transition-all duration-300 hover:scale-105 ease-in-out"
                 >
                   {
                     <div className="w-full rounded-t-lg">
