@@ -72,7 +72,7 @@ export default function MainContent({ setShowMenu }) {
     <div className="bg-white h-dvh w-full text-black">
       <SearchBar setShowMenu={setShowMenu} />
 
-      <section className="w-full h-dvh overflow-y-scroll max-w-[1440px] px-3 lg:pl-8 pt-6 lg:pr-10 ">
+      <section className="w-full h-full overflow-y-scroll max-w-[1440px] px-3 lg:pl-8 pt-6 lg:pr-10 ">
         <div className="flex flex-col gap-2 pb-6">
           <p className={`text-textHeader ${brFirmaFont.className} text-3xl `}>
             Welcome Susan,
@@ -160,9 +160,44 @@ export default function MainContent({ setShowMenu }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pb-40 md:pb-20 lg:pb-0">
+        <div className="flex flex-col gap-4 pb-40 md:pb-20 lg:pb-40">
           <p className="font-bold text-xl ">Resources for you</p>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4   ">
+            {cards.map((eachCard) => {
+              return (
+                <div
+                  key={eachCard.title}
+                  className="flex-1 hover:scale-105 ease-in-out"
+                >
+                  {
+                    <div className="w-full rounded-t-lg">
+                      <Image
+                        src={eachCard.imgURL}
+                        width={1000}
+                        height={100}
+                        className="w-full"
+                        alt="resource image"
+                      />
+
+                      <div className="flex flex-col gap-1 border p-3 rounded-b-md ">
+                        {
+                          <>
+                            <p className="text-lg font-semibold text-gray700">
+                              {eachCard.title}
+                            </p>
+                            <p className="text-gray500 text-sm">
+                              {eachCard.description}
+                            </p>
+                          </>
+                        }
+                      </div>
+                    </div>
+                  }
+                </div>
+              );
+            })}
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4   ">
             {cards.map((eachCard) => {
               return (
