@@ -14,7 +14,13 @@ module.exports = {
       },
       colors: {
         primaryColor: "#5F2ECF",
+        primary700: "#4A24A1",
+        bgPrimary: "#E8E0FA",
         textBlack: "#201E1E",
+        textHeader: "#0C111D",
+        gray700: "#344054",
+        gray500: "#667085",
+        gray900: "#101828",
       },
     },
   },

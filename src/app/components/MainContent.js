@@ -1,5 +1,11 @@
 import Image from "next/image";
 import SearchBar from "./SearchBar";
+import localFont from "next/font/local";
+import "../../../public/vector.png";
+
+const brFirmaFont = localFont({
+  src: "../../../public/fonts/BR-Firma-Bold.otf",
+});
 
 export default function MainContent() {
   const steps = [
@@ -64,60 +70,89 @@ export default function MainContent() {
     },
   ];
   return (
-    <div className="bg-white h-full w-full text-black">
+    <div className="bg-white w-full text-black">
       <SearchBar />
 
-      <section>
-        <div>
-          <p>Welcome Susan,</p>
-          <p>Get ready to complete your research processes on Zawax</p>
-        </div>
-
-        <div>
-          <p>Welcome to the cool ids club</p>
-          <p>
-            The new way designers revolutionize their work. See how others are
-            using Zadwax to accelerate their design process.
+      <section className="pl-8 pt-6 pr-10 ">
+        <div className="flex flex-col gap-2 pb-6">
+          <p className={`text-textHeader ${brFirmaFont.className} text-3xl `}>
+            Welcome Susan,
+          </p>
+          <p className="text- font-medium text-gray700">
+            Get ready to complete your research processes on Zawax
           </p>
         </div>
 
-        <div className="steps">
-          <div className="__first">
-            <div>
-              <p>
-                Getting Started{" "}
-                <span>Three simple steps to launch your first project</span>
-              </p>
-              <button>Create project</button>
+        <div className="h-[169px] relative flex justify-between items-center bg-bgPrimary/60 rounded-2xl py-6">
+          <div className="w-[90%] flex flex-col pl-6 gap-2">
+            <p className="text-sm font-semibold text-gray900 ">
+              Welcome to the cool kids club
+            </p>
+            <p className="text-primary700 text-2xl font-semibold">
+              The new way designers revolutionize their work. See how others are
+              using Zadwax to accelerate their design process.
+            </p>
+          </div>
+
+          <div className="bg absolute right-0 bottom-0 w-40 ">
+            <Image
+              src="/vector.png"
+              // src="../../../public/vector.png"
+              width={100}
+              height={50}
+              className="w-full "
+              alt="vector image"
+            />
+          </div>
+        </div>
+
+        <div className="steps flex justify-between gap-5 py-10 ">
+          <div className="__first flex flex-col items-start gap-4 flex-1 border p-4 rounded-lg">
+            <div className="w-full flex justify-between items-center">
+              <div className=" flex flex-col">
+                <p className="text-2xl font-black text-textHeader">
+                  Getting Started <br />
+                </p>{" "}
+                <p className="text-gray700">
+                  Three simple steps to launch your first project
+                </p>
+              </div>
+              <button className="px-3 py-2 rounded-lg bg-primaryColor text-white font-semibold">
+                Create project
+              </button>
             </div>
 
-            <div>
+            <div className="flex flex-col items-start gap-4">
               {steps?.map((eachStep) => {
                 return (
                   <div key={eachStep.id}>
-                    <p>
-                      {eachStep.id}:{eachStep.stepName}
+                    <p className="text-lg text-gray700 font-medium">
+                      {eachStep.id}: {eachStep.stepName}
                     </p>
-                    <p>{eachStep.description}</p>
+                    <p className="text-gray500">{eachStep.description}</p>
                   </div>
                 );
               })}
             </div>
           </div>
-          <div className="__second">
-            <div>
-              <p>
+          <div className="__second flex flex-col items-start gap-4 flex-1 border p-4 rounded-lg">
+            <div className="flex flex-col">
+              <p className="text-2xl font-black text-textHeader">
                 Research Tips and Tricks
-                <span>Three simple steps to launch your first project</span>
+              </p>
+              <p className="text-gray700">
+                Three simple steps to launch your first project
               </p>
             </div>
 
-            <div>
+            <div className="flex flex-col items-start gap-4">
               {tips?.map((eachTip) => {
                 return (
                   <div key={eachTip.heading}>
-                    <p>{eachTip.heading}</p>
-                    <p>{eachTip.description}</p>
+                    <p className="text-lg text-gray700 font-medium">
+                      {eachTip.heading}
+                    </p>
+                    <p className="text-gray500">{eachTip.description}</p>
                   </div>
                 );
               })}
@@ -125,31 +160,32 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div>
-          <p>Resources for you</p>
+        <div className="flex flex-col gap-6 pb-[100px]">
+          <p className="font-bold text-xl ">Resources for you</p>
 
-          <div>
+          <div className="flex gap-4  ">
             {cards.map((eachCard) => {
               return (
-                <div key={eachCard.title}>
+                <div key={eachCard.title} className="flex-1">
                   {
-                    <>
+                    <div className="w-full">
                       <Image
                         src={eachCard.imgURL}
                         width={100}
                         height={100}
+                        className="w-full"
                         alt="resource image"
                       />
 
-                      <div>
+                      <div className="flex flex-col gap-1 border p-3 rounded-b-md ">
                         {
                           <>
-                            <p>{eachCard.title}</p>
-                            <p>{eachCard.description}</p>
+                            <p className="text-lg font-semibold text-gray700">{eachCard.title}</p>
+                            <p className="text-gray500 text-sm">{eachCard.description}</p>
                           </>
                         }
                       </div>
-                    </>
+                    </div>
                   }
                 </div>
               );
