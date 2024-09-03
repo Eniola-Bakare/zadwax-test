@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function SearchBar({ setShowMenu }) {
   return (
-    <section className="w-full h-[72px] flex items-center justify-between  lg:justify-end gap-5 lg:gap-20 border-b-2 border-b-[#EAECF0] p-3 lg:py-2 lg:pr-10">
+    <section className=" h-[72px] flex items-center justify-between  lg:justify-end gap-5 lg:gap-20 border-b-2 border-b-[#EAECF0] p-3 lg:py-2 lg:pr-10">
       <div className="">
         <RxHamburgerMenu
           className="flex lg:hidden text-primary700 hover:text-primary700/45 ease-in-out cursor-pointer font-bold text-3xl "
@@ -14,7 +14,7 @@ export default function SearchBar({ setShowMenu }) {
           }}
         />
       </div>
-      <div className="relative w-[320px]">
+      <div className="relative lg:w-[320px]">
         <div>
           <IoSearch className="absolute left-3 top-3 text-gray500" />
         </div>

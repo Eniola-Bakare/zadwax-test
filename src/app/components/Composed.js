@@ -71,7 +71,7 @@ export default function Dashboard() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="flex justify-center 2xl:justify-start w-full h-dvh overflow-hidden">
+    <div className="flex justify-start w-full h-dvh overflow-hidden">
       <div className="hidden lg:flex h-full">
         <AddOns />
         <Menu />
