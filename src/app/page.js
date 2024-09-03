@@ -9,7 +9,7 @@ const aeonikFont = localFont({
 export default function Home() {
   return (
     <main
-      className={`${aeonikFont.className} text- flex w-full h-full bg-white items-start flex-shrink-0`}
+      className={`w-full min-w-[375px] ${aeonikFont.className} text- flex  bg-white items-start flex-shrink-0`}
     >
       <Composed />
     </main>

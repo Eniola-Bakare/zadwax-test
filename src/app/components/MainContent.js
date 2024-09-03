@@ -70,7 +70,7 @@ export default function MainContent() {
     },
   ];
   return (
-    <div className="bg-white w-full text-black">
+    <div className="bg-white h-dvh overflow-y-scroll w-full text-black">
       <SearchBar />
 
       <section className="w-full max-w-[1440px] pl-8 pt-6 pr-10 ">
@@ -129,7 +129,9 @@ export default function MainContent() {
                     <p className="text-gray700 font-bold">
                       {eachStep.id}: {eachStep.stepName}
                     </p>
-                    <p className="text-sm text-gray500">{eachStep.description}</p>
+                    <p className="text-sm text-gray500">
+                      {eachStep.description}
+                    </p>
                   </div>
                 );
               })}
@@ -149,10 +151,10 @@ export default function MainContent() {
               {tips?.map((eachTip) => {
                 return (
                   <div key={eachTip.heading}>
-                    <p className=" text-gray700 font-bold">
-                      {eachTip.heading}
+                    <p className=" text-gray700 font-bold">{eachTip.heading}</p>
+                    <p className=" text-sm text-gray500">
+                      {eachTip.description}
                     </p>
-                    <p className=" text-sm text-gray500">{eachTip.description}</p>
                   </div>
                 );
               })}
@@ -163,7 +165,7 @@ export default function MainContent() {
         <div className="flex flex-col gap-4">
           <p className="font-bold text-xl ">Resources for you</p>
 
-          <div className="flex gap-4  ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4   ">
             {cards.map((eachCard) => {
               return (
                 <div key={eachCard.title} className="flex-1">
