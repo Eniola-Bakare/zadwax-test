@@ -162,7 +162,7 @@ export default function MainContent({ setShowMenu }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pb-40 md:pb-20 lg:pb-40">
+        <div className="flex flex-col gap-4 pb-40 md:pb-20 lg:pb-0">
           <p className="font-bold text-xl ">Resources for you</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4   ">
