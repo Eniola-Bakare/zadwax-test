@@ -117,7 +117,7 @@ export default function MainContent({ setShowMenu }) {
                   Three simple steps to launch your first project
                 </p>
               </div>
-              <button className="px-3 py-2 rounded-lg bg-primaryColor text-white text-xs lg:text-base lg:font-semibold self-end">
+              <button className="px-3 py-2 rounded-lg bg-primaryColor hover:bg-primaryColor/40 transition-all ease-in-out text-white text-xs lg:text-base lg:font-semibold self-end lg:self-center">
                 Create project
               </button>
             </div>
@@ -168,7 +168,10 @@ export default function MainContent({ setShowMenu }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4   ">
             {cards.map((eachCard) => {
               return (
-                <div key={eachCard.title} className="flex-1">
+                <div
+                  key={eachCard.title}
+                  className="flex-1 hover:scale-105 ease-in-out"
+                >
                   {
                     <div className="w-full rounded-t-lg">
                       <Image

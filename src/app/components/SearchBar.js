@@ -2,13 +2,16 @@ import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-export default function SearchBar({setShowMenu}) {
+export default function SearchBar({ setShowMenu }) {
   return (
     <section className="w-full h-[72px] flex items-center justify-between  lg:justify-end gap-5 lg:gap-20 border-b-2 border-b-[#EAECF0] p-3 lg:py-2 lg:pr-10">
       <div className="">
         <RxHamburgerMenu
-          className="flex lg:hidden text-primary700 hover:text-primary700/30 font-bold text-3xl "
-          onClick={() => {setShowMenu(true); console.log('first')}}
+          className="flex lg:hidden text-primary700 hover:text-primary700/45 ease-in-out cursor-pointer font-bold text-3xl "
+          onClick={() => {
+            setShowMenu(true);
+            console.log("first");
+          }}
         />
       </div>
       <div className="relative w-[320px]">
@@ -22,7 +25,7 @@ export default function SearchBar({setShowMenu}) {
         />
       </div>
       <div className="flex gap-6">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center cursor-pointer hover:animate-pulse ease-in-out">
           <Image
             src={"/Notification.png"}
             width={25}
@@ -34,7 +37,7 @@ export default function SearchBar({setShowMenu}) {
           <Image
             src={"/profile.png"}
             width={1000}
-            alt="notification btn"
+            alt="profile thumbnail"
             height={0}
           />
         </div>

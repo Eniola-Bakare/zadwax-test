@@ -7,7 +7,7 @@ export default function Menu({ setShowMenu }) {
       <div className="__menu-top ">
         <div className="__logo relative flex items-center gap-2 p-2 pt-10 lg:pt-0 pb-3">
           <IoIosCloseCircle
-            className="flex lg:hidden text-primary700 hover:text-primary700/30 text-4xl absolute top-0 right-0"
+            className="flex lg:hidden text-primary700 cursor-pointer hover:text-primary700/45 text-4xl absolute top-0 right-0"
             onClick={() => setShowMenu(false)}
           />
 
@@ -15,16 +15,17 @@ export default function Menu({ setShowMenu }) {
             src="/logo.png"
             width={18}
             height={20}
+            className=" cursor-pointer"
             alt="logo text & image"
           />
-          <p className="flex-shrink-0 text-textBlack text-[24px] font-black">
+          <p className="flex-shrink-0 cursor-pointer text-textBlack text-[24px] font-black">
             Zadwax
           </p>
         </div>
 
         <div className="__menu ">
           <div className="__menu-first">
-            <div className="flex items-center gap-5 rounded-lg p-2 bg-primary50">
+            <div className="flex items-center gap-5 rounded-lg p-2 cursor-pointer bg-primary50">
               <Image
                 src="/homeIcon.png"
                 width={25}
@@ -35,7 +36,7 @@ export default function Menu({ setShowMenu }) {
                 Home
               </p>
             </div>
-            <div className="flex items-center p-2 gap-5">
+            <div className="flex items-center cursor-pointer p-2 gap-5">
               <Image
                 src="/recently.png"
                 width={25}
@@ -46,7 +47,7 @@ export default function Menu({ setShowMenu }) {
                 Recents
               </p>
             </div>
-            <div className="flex items-center gap-5 p-2">
+            <div className="flex items-center cursor-pointer gap-5 p-2">
               <Image
                 src="/starred.png"
                 width={25}
@@ -60,7 +61,7 @@ export default function Menu({ setShowMenu }) {
           </div>
 
           <div className="__menu-second relative border-t-2 ">
-            <div className="flex items-center gap-5 p-2">
+            <div className="flex items-center cursor-pointer gap-5 p-2">
               <Image
                 src="/project.png"
                 width={25}
@@ -76,7 +77,7 @@ export default function Menu({ setShowMenu }) {
       </div>
 
       <div className="__menu-btn p-2">
-        <div className="flex items-center gap-5">
+        <div className="flex items-center cursor-pointer gap-5">
           <Image
             src="/info.png"
             width={25}
@@ -88,7 +89,7 @@ export default function Menu({ setShowMenu }) {
           </p>
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center cursor-pointer gap-5">
           <Image
             src="/settings.png"
             width={25}
