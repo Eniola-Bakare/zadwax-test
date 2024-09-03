@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 import localFont from "next/font/local";
-import "../../../public/vector.png";
 
 const brFirmaFont = localFont({
   src: "../../../public/fonts/BR-Firma-Bold.otf",
@@ -97,7 +96,6 @@ export default function MainContent({ setShowMenu }) {
           <div className="bg absolute right-0 bottom-0 lg:w-40 ">
             <Image
               src="/vector.png"
-              // src="../../../public/vector.png"
               width={1000}
               height={50}
               className="w-full "

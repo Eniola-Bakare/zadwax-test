@@ -33,7 +33,7 @@ export default function SearchBar({ setShowMenu }) {
             height={20}
           />
         </div>
-        <div className="w-[60px] lg:w-[40px]">
+        <div className="w-[40px]">
           <Image
             src={"/profile.png"}
             width={1000}

@@ -1,5 +1,3 @@
-import Menu from "./components/Menu";
-import MainContent from "./components/MainContent";
 import Composed from "./components/Composed";
 import localFont from "next/font/local";
 
