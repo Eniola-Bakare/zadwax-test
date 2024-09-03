@@ -1,6 +1,6 @@
 import Menu from "./components/Menu";
 import MainContent from "./components/MainContent";
-import AddOns from "./components/AddOns";
+import Composed from "./components/Composed";
 import localFont from "next/font/local";
 
 const aeonikFont = localFont({
@@ -9,11 +9,9 @@ const aeonikFont = localFont({
 export default function Home() {
   return (
     <main
-      className={`${aeonikFont.className} text- flex w-full max-w-[1440px] h-full items-start flex-shrink-0`}
+      className={`${aeonikFont.className} text- flex w-full h-full bg-white items-start flex-shrink-0`}
     >
-      <AddOns />
-      <Menu />
-      <MainContent />
+      <Composed />
     </main>
   );
 }
